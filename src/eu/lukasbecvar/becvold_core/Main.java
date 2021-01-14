@@ -1,6 +1,6 @@
 package eu.lukasbecvar.becvold_core;
 
-/* Becvold core plugin desn
+/* Becvold core plugin features
 * Working on mincraft 1.16.4
 * Features
 * 1)SetHome /sethome /home
