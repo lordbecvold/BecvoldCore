@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Becvold_core">
+    <output-path>$PROJECT_DIR$/bin</output-path>
+    <root id="archive" name="Becvold_core.jar">
+      <element id="module-output" name="Becvold_core (spigot plugin)" />
+    </root>
+  </artifact>
+</component>
