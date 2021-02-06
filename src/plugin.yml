@@ -5,6 +5,8 @@ api-version: 1.15
 description: This is plugin core for minecraft survival server 1.16.4
 prefix: BecvoldCore
 commands:
+  rank:
+    description: set rank by name
   coordinates:
     description: Displays the list of commands and their functions
     aliases:

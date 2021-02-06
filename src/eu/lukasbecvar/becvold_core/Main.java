@@ -156,6 +156,7 @@ public class Main extends JavaPlugin implements Listener {
         cooldownTaskSetHome = new HashMap<>();
         getLogger().info("Enabled!");
         //End of setHome
+        super.onEnable();
     }
 
     @Override
@@ -164,6 +165,7 @@ public class Main extends JavaPlugin implements Listener {
             resetPlayerNameOriginal(p);
         }
         Bukkit.getConsoleSender().sendMessage("Becvold core plugin is stoped...");
+        super.onDisable();
     }
 
     @Override
