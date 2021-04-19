@@ -133,6 +133,12 @@ public class Main extends JavaPlugin implements Listener {
                 return true;
             }
         });
+        this.getCommand("core").setExecutor((CommandExecutor)new CommandExecutor() {
+            public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+                command_core(sender);
+                return true;
+            }
+        });
         //End of ram util
         //SetHome util
         getServer().getPluginManager().registerEvents(new EventListener(), this);
@@ -283,6 +289,18 @@ public class Main extends JavaPlugin implements Listener {
         else {
             sender.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + "Server" + ChatColor.DARK_GRAY + "] " + ChatColor.GRAY + "You Do Not Have Permission to Execute This Command");
         }
+    }
+
+    public void command_core(final CommandSender sender) {
+        sender.sendMessage(ChatColor.DARK_GRAY + "-------------------------------------------------");
+        sender.sendMessage(ChatColor.DARK_GRAY + "----------------BECBOLD CORE INFO----------------");
+        sender.sendMessage(ChatColor.GRAY + "Features");
+        sender.sendMessage(ChatColor.GRAY + "1) /sethome /home");
+        sender.sendMessage(ChatColor.GRAY + "2) OnePlayer sleep");
+        sender.sendMessage(ChatColor.GRAY + "3) Tab Death counter");
+        sender.sendMessage(ChatColor.GRAY + "4) Coordinates in hud");
+        sender.sendMessage(ChatColor.DARK_GRAY + "-------------------------------------------------");
+
     }
 
     public void reloadConfig() {

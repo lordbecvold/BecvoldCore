@@ -28,6 +28,13 @@ commands:
   ram:
     description: Check RAM Usage
     usage: /ram
+  core:
+    description: show plugin information
+    usage: /core
+    aliases:
+      - help
+      - becvold
+      - bc
   tabDeathCount:
     description: Main command of TabDeathCount.  Call a subcommand.
     permission: tabdeathcount.command
