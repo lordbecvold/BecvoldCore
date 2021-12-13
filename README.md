@@ -6,6 +6,7 @@
 * Tab Death counter
 * Coordinates in hud
 * Ram usage monitor
+* Timer util (you can set day or night time longer then normal)
 
 ## Dependencies
 * Spigot

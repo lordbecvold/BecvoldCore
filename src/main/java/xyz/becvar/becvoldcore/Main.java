@@ -58,6 +58,7 @@ public class Main extends JavaPlugin implements Listener {
         this.getCommand("coordinates").setExecutor((CommandExecutor)new Coordinates());
         CoordinatesTimer.run((Plugin)this);
         //End of Hud cords
+
         //Timer util
         this.getConfig().options().copyDefaults(true);
         final int evening = this.getConfig().getInt("times.evening");
@@ -152,6 +153,7 @@ public class Main extends JavaPlugin implements Listener {
         cooldownTaskSetHome = new HashMap<>();
         getLogger().info("Enabled!");
         //End of setHome
+
         super.onEnable();
     }
 
@@ -283,12 +285,14 @@ public class Main extends JavaPlugin implements Listener {
 
     public void command_core(final CommandSender sender) {
         sender.sendMessage(ChatColor.DARK_GRAY + "-------------------------------------------------");
-        sender.sendMessage(ChatColor.DARK_GRAY + "----------------BECBOLD CORE INFO----------------");
+        sender.sendMessage(ChatColor.DARK_GRAY + "----------------BECVOLD CORE INFO----------------");
         sender.sendMessage(ChatColor.GRAY + "Features");
         sender.sendMessage(ChatColor.GRAY + "1) /sethome /home");
         sender.sendMessage(ChatColor.GRAY + "2) OnePlayer sleep");
         sender.sendMessage(ChatColor.GRAY + "3) Tab Death counter");
         sender.sendMessage(ChatColor.GRAY + "4) Coordinates in hud");
+        sender.sendMessage(ChatColor.GRAY + "5) Ram monitor /ram");
+        sender.sendMessage(ChatColor.GRAY + "6) Timer util in config");
         sender.sendMessage(ChatColor.DARK_GRAY + "-------------------------------------------------");
 
     }

@@ -1,7 +1,6 @@
-main: eu.lukasbecvar.becvold_core.Main
+main: xyz.becvar.becvoldcore.Main
 name: BecvoldCore
-version: 2.0
-api-version: 1.18.1
+version: 2.0.0
 description: This is plugin core for minecraft survival server 1.18.1
 prefix: BecvoldCore
 commands:
