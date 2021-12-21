@@ -1,9 +1,11 @@
 main: xyz.becvar.becvoldcore.Main
 name: BecvoldCore
-version: 2.0.0
+version: 2.1.0
 description: This is plugin core for minecraft survival server 1.18.1
 prefix: BecvoldCore
 commands:
+  ui:
+    description: View players info.
   coordinates:
     description: Displays the list of commands and their functions
     aliases:

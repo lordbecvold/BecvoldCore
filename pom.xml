@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
-        <build.version>2.0.0</build.version>
+        <build.version>2.1.0</build.version>
         <build.package>xyz.becvar.becvoldcore</build.package>
         <build.main>xyz.becvar.becvoldcore.Main</build.main>
         <build.java.version>17</build.java.version>
@@ -13,7 +13,7 @@
 
     <groupId>xyz.becvar.becvoldcore</groupId>
     <artifactId>BecvoldCore</artifactId>
-    <version>2.0.0</version>
+    <version>2.1.0</version>
     <packaging>jar</packaging>
 
     <repositories>
