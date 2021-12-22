@@ -27,8 +27,6 @@ import xyz.becvar.becvoldcore.setHome.SetHomeUtils;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.IllegalFormatException;
 import java.util.UUID;
@@ -38,7 +36,6 @@ import java.util.regex.Pattern;
 public class Main extends JavaPlugin implements Listener {
 
     /*Death counter variabiles*/
-    private static final int NAME_LENGTH_MAX = 16;
     private String playerNameFormat;
     private String deathCountFormat;
     private DeathCountPosition deathCountPosition;
@@ -57,16 +54,17 @@ public class Main extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
 
+        //Save config
+        getConfig().options().copyDefaults(true);
+        saveDefaultConfig();
 
         //Hud cords
-        this.saveDefaultConfig();
         Utils.readConfig(this.getConfig(), (Plugin)this);
         this.getCommand("coordinates").setExecutor((CommandExecutor)new Coordinates());
         CoordinatesTimer.run((Plugin)this);
         //End of Hud cords
 
         //Timer util
-        this.getConfig().options().copyDefaults(true);
         final int evening = this.getConfig().getInt("times.evening");
         final int night = this.getConfig().getInt("times.night");
         final int day = this.getConfig().getInt("times.day");
@@ -75,7 +73,6 @@ public class Main extends JavaPlugin implements Listener {
         System.out.print("[LongerTime] Day:" + day);
         System.out.print("[LongerTime] Evening:" + evening);
         System.out.print("[LongerTime] Night:" + night);
-        this.saveConfig();
         new BukkitRunnable() {
             public void run() {
                 for (final World ww : Bukkit.getWorlds()) {
@@ -112,7 +109,6 @@ public class Main extends JavaPlugin implements Listener {
         //End of Timer utils
         //DeathCounter util
         getServer().getPluginManager().registerEvents((Listener)this, (Plugin)this);
-        saveDefaultConfig();
         if (!this.loadVerifyConfig()) {
             return;
         }
@@ -143,13 +139,6 @@ public class Main extends JavaPlugin implements Listener {
         getCommand("sethome").setExecutor(this);
         getCommand("home").setExecutor(this);
         getServer().getPluginManager().registerEvents(new SetHomeEvents(this), this);
-        config.options().copyDefaults(true);
-        saveDefaultConfig();
-        try {
-            config.save(getDataFolder() + File.separator + "config.yml");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         if (!file.exists()) {
             saveHomesFile();
         }

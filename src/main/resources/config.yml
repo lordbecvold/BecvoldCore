@@ -1,3 +1,4 @@
+# Set home config
 show-sethome-message: true
 sethome-message: '&8[&7Server&8]&7Your home position updated!'
 show-teleport-message: false
@@ -7,22 +8,22 @@ respawn-player-at-home: true
 home-command-delay: true
 home-time-delay: 3
 
+# Counter config
 playerName:
   format: "%-16s"
 deathCount:
   format: " %d"
   position: end
 
+# Time util config
 times:
-  night: 0
-  morning: 0
-  day: 0
-  evening: 0
+  night: 0 # 0 is normal time
+  morning: 0 # 0 is normal time
+  day: 15  # 15 = day is 15x longer then normal
+  evening: 0 # 0 is normal time
 
+# Others
 ticks: 10
 default-on: false
 Players: []
 
-sneak-ignore: true # Don't chop trees if sneaking while breaking
-trees-have-leaves: false # Trees will only be felled if they have leaves, to avoid buildings being "felled"
-damage-per-block: true # Damages your axe for each log destroyed
