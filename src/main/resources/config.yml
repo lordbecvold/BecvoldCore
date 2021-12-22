@@ -27,3 +27,8 @@ ticks: 10
 default-on: false
 Players: []
 
+# treecapitator config
+Radius: 1
+Height: 256
+
+
