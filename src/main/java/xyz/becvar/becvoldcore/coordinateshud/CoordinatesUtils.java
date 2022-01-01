@@ -7,7 +7,7 @@ import org.bukkit.entity.*;
 import org.bukkit.command.*;
 import net.md_5.bungee.api.*;
 
-public class Utils {
+public class CoordinatesUtils {
 
     private static List<String> Players;
     private static FileConfiguration cfg;
@@ -16,26 +16,26 @@ public class Utils {
     private static boolean defaulton;
 
     public static void readConfig(final FileConfiguration cfg, final Plugin plugin) {
-        Utils.cfg = cfg;
-        Utils.plugin = plugin;
-        Utils.ticks = cfg.getString("ticks");
-        Utils.defaulton = (boolean)cfg.get("default-on");
-        Utils.Players = (List<String>)cfg.getStringList("Players");
+        CoordinatesUtils.cfg = cfg;
+        CoordinatesUtils.plugin = plugin;
+        CoordinatesUtils.ticks = cfg.getString("ticks");
+        CoordinatesUtils.defaulton = (boolean)cfg.get("default-on");
+        CoordinatesUtils.Players = (List<String>)cfg.getStringList("Players");
     }
 
     public static int getTicks() {
-        return Integer.parseInt(Utils.ticks);
+        return Integer.parseInt(CoordinatesUtils.ticks);
     }
 
     public static boolean getDefaultOn() {
-        return Utils.defaulton;
+        return CoordinatesUtils.defaulton;
     }
 
     private static List<String> getPlayers() {
-        if (Utils.Players == null) {
+        if (CoordinatesUtils.Players == null) {
             return new ArrayList<String>();
         }
-        return Utils.Players;
+        return CoordinatesUtils.Players;
     }
 
     public static boolean checkPlayerList(final Player player) {
@@ -43,17 +43,17 @@ public class Utils {
     }
 
     public static void savePlayer(final Player player) {
-        if (!Utils.Players.contains(player.getName())) {
-            Utils.Players.add(player.getName());
+        if (!CoordinatesUtils.Players.contains(player.getName())) {
+            CoordinatesUtils.Players.add(player.getName());
         }
-        Utils.cfg.set("Players", (Object)Utils.Players);
-        Utils.plugin.saveConfig();
+        CoordinatesUtils.cfg.set("Players", (Object) CoordinatesUtils.Players);
+        CoordinatesUtils.plugin.saveConfig();
     }
 
     public static void removePlayer(final Player player) {
-        Utils.Players.remove(player.getName());
-        Utils.cfg.set("Players", (Object)Utils.Players);
-        Utils.plugin.saveConfig();
+        CoordinatesUtils.Players.remove(player.getName());
+        CoordinatesUtils.cfg.set("Players", (Object) CoordinatesUtils.Players);
+        CoordinatesUtils.plugin.saveConfig();
     }
 
     public static void sendMsg(final CommandSender player, final String msg) {

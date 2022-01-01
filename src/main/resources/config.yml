@@ -1,19 +1,10 @@
-# Set home config
-show-sethome-message: true
-sethome-message: '&8[&7Server&8]&7Your home position updated!'
-show-teleport-message: false
-teleport-message: '&8[&7Server&8]&7Teleporting to home...'
-play-warp-sound: true
-respawn-player-at-home: true
-home-command-delay: true
-home-time-delay: 3
+#BecvoldCore config
 
-# Counter config
-playerName:
-  format: "%-16s"
-deathCount:
-  format: " %d"
-  position: end
+#Coordinates Hud config
+ticks: 10
+default-on: false
+Players: []
+
 
 # Time util config
 times:
@@ -22,13 +13,5 @@ times:
   day: 15  # 15 = day is 15x longer then normal
   evening: 0 # 0 is normal time
 
-# Others
-ticks: 10
-default-on: false
-Players: []
 
-# treecapitator config
-Radius: 1
-Height: 256
-
-
+#Others

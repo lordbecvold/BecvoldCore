@@ -24,13 +24,13 @@ public class Coordinates implements CommandExecutor, TabCompleter {
 
             return true;
         }
-        if (!Utils.checkPlayerList(player)) {
-            Utils.savePlayer(player);
+        if (!CoordinatesUtils.checkPlayerList(player)) {
+            CoordinatesUtils.savePlayer(player);
         }
         else {
-            Utils.removePlayer(player);
+            CoordinatesUtils.removePlayer(player);
         }
-        player.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + "*" + ChatColor.DARK_GRAY + "] " + ChatColor.GRAY + "Coordinates HUD is now " + (((Utils.checkPlayerList(player) && !Utils.getDefaultOn()) || (!Utils.checkPlayerList(player) && Utils.getDefaultOn())) ? "enabled" : "disabled") + ".");
+        player.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + "*" + ChatColor.DARK_GRAY + "] " + ChatColor.GRAY + "Coordinates HUD is now " + (((CoordinatesUtils.checkPlayerList(player) && !CoordinatesUtils.getDefaultOn()) || (!CoordinatesUtils.checkPlayerList(player) && CoordinatesUtils.getDefaultOn())) ? "enabled" : "disabled") + ".");
         return true;
     }
 

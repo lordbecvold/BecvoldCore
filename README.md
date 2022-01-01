@@ -1,9 +1,8 @@
 # Minecraft spigot survival core plugin
 
 # - Features
-* SetHome /sethome /home
+* SetHome
 * OnePlayer sleep
-* Tab Death counter
 * Coordinates in hud
 * Ram usage monitor
 * Timer util (you can set day or night time longer then normal)
