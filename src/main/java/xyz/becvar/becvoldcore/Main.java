@@ -15,6 +15,7 @@ import xyz.becvar.becvoldcore.coordinateshud.Coordinates;
 import xyz.becvar.becvoldcore.coordinateshud.CoordinatesTimer;
 import xyz.becvar.becvoldcore.coordinateshud.CoordinatesUtils;
 import xyz.becvar.becvoldcore.events.BedListener;
+import xyz.becvar.becvoldcore.events.EntityChangingBlockEvent;
 import xyz.becvar.becvoldcore.events.UserJoinEvent;
 import xyz.becvar.becvoldcore.events.UserLeaveEvent;
 import xyz.becvar.becvoldcore.util.Logger;
@@ -41,6 +42,8 @@ public class Main extends JavaPlugin {
         Logger.INSTANCE.consoleLogGreen("BecvoldCore: User join event initiated...");
         Bukkit.getServer().getPluginManager().registerEvents(new UserLeaveEvent(), this);
         Logger.INSTANCE.consoleLogGreen("BecvoldCore: User leave event initiated...");
+        Bukkit.getServer().getPluginManager().registerEvents(new EntityChangingBlockEvent(), this);
+        Logger.INSTANCE.consoleLogGreen("BecvoldCore: Anti mob grief initiated...");
         //End of events register
 
 
