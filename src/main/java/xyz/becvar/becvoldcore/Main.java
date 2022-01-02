@@ -3,6 +3,7 @@ package xyz.becvar.becvoldcore;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.command.CommandExecutor;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -14,17 +15,20 @@ import xyz.becvar.becvoldcore.command.sethome.CommandSetHome;
 import xyz.becvar.becvoldcore.coordinateshud.Coordinates;
 import xyz.becvar.becvoldcore.coordinateshud.CoordinatesTimer;
 import xyz.becvar.becvoldcore.coordinateshud.CoordinatesUtils;
-import xyz.becvar.becvoldcore.events.BedListener;
-import xyz.becvar.becvoldcore.events.EntityChangingBlockEvent;
-import xyz.becvar.becvoldcore.events.UserJoinEvent;
-import xyz.becvar.becvoldcore.events.UserLeaveEvent;
+import xyz.becvar.becvoldcore.events.*;
 import xyz.becvar.becvoldcore.util.Logger;
 
 public class Main extends JavaPlugin {
 
+    public Main main;
+
 
     @Override
     public void onEnable() {
+
+        //Init plugin
+        main = this;
+
         Logger.INSTANCE.logSpacerToConsole();
         Logger.INSTANCE.consoleLogGreen("BecvoldCore: plugin starting...");
 
@@ -44,6 +48,8 @@ public class Main extends JavaPlugin {
         Logger.INSTANCE.consoleLogGreen("BecvoldCore: User leave event initiated...");
         Bukkit.getServer().getPluginManager().registerEvents(new EntityChangingBlockEvent(), this);
         Logger.INSTANCE.consoleLogGreen("BecvoldCore: Anti mob grief initiated...");
+        Bukkit.getServer().getPluginManager().registerEvents(new PunchTreeEvent(), this);
+        Logger.INSTANCE.consoleLogGreen("BecvoldCore: Treecapitator initiated...");
         //End of events register
 
 
