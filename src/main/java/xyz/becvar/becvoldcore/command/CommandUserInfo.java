@@ -124,13 +124,6 @@ public class CommandUserInfo implements CommandExecutor {
         return "False";
     }
 
-    public static String getOnline(final Player p) {
-        if (p.isOnline()) {
-            return "True";
-        }
-        return "False";
-    }
-
     public static int getHunger(final Player p) {
         return p.getFoodLevel();
     }

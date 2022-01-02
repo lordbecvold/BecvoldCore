@@ -15,6 +15,8 @@ import xyz.becvar.becvoldcore.coordinateshud.Coordinates;
 import xyz.becvar.becvoldcore.coordinateshud.CoordinatesTimer;
 import xyz.becvar.becvoldcore.coordinateshud.CoordinatesUtils;
 import xyz.becvar.becvoldcore.events.BedListener;
+import xyz.becvar.becvoldcore.events.UserJoinEvent;
+import xyz.becvar.becvoldcore.events.UserLeaveEvent;
 import xyz.becvar.becvoldcore.util.Logger;
 
 public class Main extends JavaPlugin {
@@ -33,7 +35,12 @@ public class Main extends JavaPlugin {
 
 
         //Register basic events
-        new BedListener(this);
+        Bukkit.getServer().getPluginManager().registerEvents(new BedListener(this), this);
+        Logger.INSTANCE.consoleLogGreen("BecvoldCore: One player sleep initiated...");
+        Bukkit.getServer().getPluginManager().registerEvents(new UserJoinEvent(), this);
+        Logger.INSTANCE.consoleLogGreen("BecvoldCore: User join event initiated...");
+        Bukkit.getServer().getPluginManager().registerEvents(new UserLeaveEvent(), this);
+        Logger.INSTANCE.consoleLogGreen("BecvoldCore: User leave event initiated...");
         //End of events register
 
 
@@ -116,30 +123,5 @@ public class Main extends JavaPlugin {
         Logger.INSTANCE.consoleLogRed("BecvoldCore: plugin disabling...");
         Logger.INSTANCE.logSpacerToConsole();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

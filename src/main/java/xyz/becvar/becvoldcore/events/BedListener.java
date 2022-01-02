@@ -1,6 +1,7 @@
 package xyz.becvar.becvoldcore.events;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerBedEnterEvent;
@@ -18,7 +19,7 @@ public class BedListener implements Listener {
 
     @EventHandler
     public void onPlayerViolationCommand(PlayerBedEnterEvent e) {
-        Bukkit.getServer().getScheduler().runTaskLater(this.main, (Runnable)new Runnable() {
+        Bukkit.getServer().getScheduler().runTaskLater(main, (Runnable)new Runnable() {
             @Override
             public void run() {
                 if (e.getPlayer().isSleeping()) {
@@ -28,5 +29,6 @@ public class BedListener implements Listener {
                 }
             }
         }, 100L);
+        Bukkit.broadcastMessage(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + "BecvoldCore" + ChatColor.DARK_GRAY + "]:" + " " + ChatColor.GRAY + e.getPlayer().getDisplayName() + " sleeping!");
     }
 }

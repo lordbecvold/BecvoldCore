@@ -20,7 +20,7 @@ public class Coordinates implements CommandExecutor, TabCompleter {
         }
         final Player player = (Player)sender;
         if (args.length == 0 || !args[0].toLowerCase().equals("toggle")) {
-            player.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + "*" + ChatColor.DARK_GRAY + "] " + ChatColor.GRAY + "Usage: /coordinates toggle");
+            player.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + "BecvoldCore" + ChatColor.DARK_GRAY + "] " + ChatColor.GRAY + "Usage: /coordinates toggle");
 
             return true;
         }
@@ -30,7 +30,7 @@ public class Coordinates implements CommandExecutor, TabCompleter {
         else {
             CoordinatesUtils.removePlayer(player);
         }
-        player.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + "*" + ChatColor.DARK_GRAY + "] " + ChatColor.GRAY + "Coordinates HUD is now " + (((CoordinatesUtils.checkPlayerList(player) && !CoordinatesUtils.getDefaultOn()) || (!CoordinatesUtils.checkPlayerList(player) && CoordinatesUtils.getDefaultOn())) ? "enabled" : "disabled") + ".");
+        player.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + "BecvoldCore" + ChatColor.DARK_GRAY + "] " + ChatColor.GRAY + "Coordinates HUD is now " + (((CoordinatesUtils.checkPlayerList(player) && !CoordinatesUtils.getDefaultOn()) || (!CoordinatesUtils.checkPlayerList(player) && CoordinatesUtils.getDefaultOn())) ? "enabled" : "disabled") + ".");
         return true;
     }
 
