@@ -50,6 +50,10 @@ public class Main extends JavaPlugin {
         Logger.INSTANCE.consoleLogGreen("BecvoldCore: Anti mob grief initiated...");
         Bukkit.getServer().getPluginManager().registerEvents(new PunchTreeEvent(), this);
         Logger.INSTANCE.consoleLogGreen("BecvoldCore: Treecapitator initiated...");
+        Bukkit.getServer().getPluginManager().registerEvents(new ServerPingEvent(), this);
+        Logger.INSTANCE.consoleLogGreen("BecvoldCore: server ping event initiated...");
+        Bukkit.getServer().getPluginManager().registerEvents(new PlayerSendMessageEvent(), this);
+        Logger.INSTANCE.consoleLogGreen("BecvoldCore: player message event initiated...");
         //End of events register
 
 

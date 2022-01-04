@@ -1,13 +1,11 @@
 #BecvoldCore config
 
-#Coordinates Hud config
-ticks: 10
+ticks: 10 #Coordinates Hud config
 default-on: false
 Players: []
 
 
-# Time util config
-times:
+times: # Time util config
   night: 0 # 0 is normal time
   morning: 0 # 0 is normal time
   day: 15  # 15 = day is 15x longer then normal
