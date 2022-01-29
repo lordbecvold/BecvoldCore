@@ -8,7 +8,7 @@ public class ServerPingEvent implements Listener {
 
     @EventHandler
     public void countDown(ServerListPingEvent event){
-        event.setMotd("§8» §6§lBECVAR§7.§6§lXYZ §8× §7Private survival server");
+        event.setMotd("§7Private survival server");
         event.setMaxPlayers(20);
     }
 }

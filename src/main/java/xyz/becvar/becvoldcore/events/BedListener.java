@@ -18,8 +18,8 @@ public class BedListener implements Listener {
     }
 
     @EventHandler
-    public void onPlayerViolationCommand(PlayerBedEnterEvent e) {
-        Bukkit.getServer().getScheduler().runTaskLater(main, (Runnable)new Runnable() {
+    public void onPlayerViolationCommand(final PlayerBedEnterEvent e) {
+        Bukkit.getServer().getScheduler().runTaskLater((Plugin)this.main, (Runnable)new Runnable() {
             @Override
             public void run() {
                 if (e.getPlayer().isSleeping()) {
@@ -29,6 +29,5 @@ public class BedListener implements Listener {
                 }
             }
         }, 100L);
-        Bukkit.broadcastMessage(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + "BecvoldCore" + ChatColor.DARK_GRAY + "]:" + " " + ChatColor.GRAY + e.getPlayer().getDisplayName() + " sleeping!");
     }
 }
