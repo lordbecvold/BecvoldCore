@@ -9,6 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import xyz.becvar.becvoldcore.command.CommandHelp;
 import xyz.becvar.becvoldcore.command.CommandRam;
+import xyz.becvar.becvoldcore.command.CommandUptime;
 import xyz.becvar.becvoldcore.command.CommandUserInfo;
 import xyz.becvar.becvoldcore.command.sethome.CommandHome;
 import xyz.becvar.becvoldcore.command.sethome.CommandSetHome;
@@ -64,6 +65,8 @@ public class Main extends JavaPlugin {
         Logger.INSTANCE.consoleLogGreen("BecvoldCore: ram command registred...");
         this.getCommand("ui").setExecutor(new CommandUserInfo());
         Logger.INSTANCE.consoleLogGreen("BecvoldCore: ui command registred...");
+        this.getCommand("uptime").setExecutor(new CommandUptime());
+        Logger.INSTANCE.consoleLogGreen("BecvoldCore: uptime command registred...");
         //End of command register
 
 

@@ -32,6 +32,8 @@ commands:
     usage: /ram
   ui:
     description: View players info.
+  uptime:
+    description: View server uptime.
 permissions:
   coordinateshud.toggle:
     description: Allows for /coordinates toggle command

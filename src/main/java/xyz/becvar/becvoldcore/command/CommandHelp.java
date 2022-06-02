@@ -11,17 +11,14 @@ public class CommandHelp implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (sender instanceof Player) {
-            sender.sendMessage(ChatColor.DARK_GRAY + "====================================================");
-            sender.sendMessage(ChatColor.GRAY + "BecvoldCore plugin help");
-            sender.sendMessage(ChatColor.GRAY + "SetHome: /sethome, /home");
-            sender.sendMessage(ChatColor.GRAY + "CoordinatesHud: /coordinates toggle");
-            sender.sendMessage(ChatColor.GRAY + "Ram usage monitor: /ram");
-            sender.sendMessage(ChatColor.GRAY + "User info: /ui + player name");
-            sender.sendMessage(ChatColor.DARK_GRAY + "====================================================");
-        } else {
-            Logger.INSTANCE.printErrorToConsole("You can use this command only form game as player");
-        }
+        sender.sendMessage(ChatColor.DARK_GRAY + "====================================================");
+        sender.sendMessage(ChatColor.GRAY + "BecvoldCore plugin help");
+        sender.sendMessage(ChatColor.GRAY + "SetHome: /sethome, /home");
+        sender.sendMessage(ChatColor.GRAY + "CoordinatesHud: /coordinates toggle");
+        sender.sendMessage(ChatColor.GRAY + "Ram usage monitor: /ram");
+        sender.sendMessage(ChatColor.GRAY + "User info: /ui + player name");
+        sender.sendMessage(ChatColor.GRAY + "Uptime /uptime");
+        sender.sendMessage(ChatColor.DARK_GRAY + "====================================================");
         return true;
     }
 }
