@@ -1,8 +1,8 @@
 main: xyz.becvar.becvoldcore.Main
 name: BecvoldCore
-version: 3.0.0
-api-version: 1.18
-description: This is plugin core for minecraft survival server 1.18.1
+version: 4.0.0
+api-version: 1.19
+description: This is plugin core for minecraft survival server 1.19.2
 prefix: BecvoldCore
 
 commands:
@@ -13,10 +13,8 @@ commands:
       - bc
     description: The plugin help command.
   home:
-    permission: core.home
     description: Command to teleport yor home
   sethome:
-    permission: core.sethome
     description: Command to set your home location.
   coordinates:
     description: Displays the list of commands and their functions
@@ -25,15 +23,17 @@ commands:
       - coords
       - coordinateshud
     usage: /coordinates toggle
-    permission: coordinateshud.toggle
     permission-message: You do not have the coordinateshud.toggle permission.
   ram:
     description: Check RAM Usage
+    permission: core.ram
     usage: /ram
   ui:
     description: View players info.
+    permission: core.ui
   uptime:
     description: View server uptime.
+    permission: core.uptime
 permissions:
   coordinateshud.toggle:
     description: Allows for /coordinates toggle command

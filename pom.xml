@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
-        <build.version>3.0.0</build.version>
+        <build.version>4.0.0</build.version>
         <build.package>xyz.becvar.becvoldcore</build.package>
         <build.main>xyz.becvar.becvoldcore.Main</build.main>
         <build.java.version>17</build.java.version>
@@ -13,7 +13,7 @@
 
     <groupId>xyz.becvar.becvoldcore</groupId>
     <artifactId>BecvoldCore</artifactId>
-    <version>3.0.0</version>
+    <version>4.0.0</version>
     <packaging>jar</packaging>
 
     <repositories>
@@ -53,7 +53,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.18-R0.1-SNAPSHOT</version>
+            <version>1.19-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
