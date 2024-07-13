@@ -1,6 +1,6 @@
-# Minecraft spigot survival core plugin
+# Minecraft survival core plugin
 
-# - Features
+# Components
 * SetHome
 * OnePlayer sleep
 * Coordinates in hud
