@@ -12,3 +12,6 @@
 * Spigot
    * Version: **1.18.1**
    * [Website](https://getbukkit.org/)
+
+## License
+The framework is open-sourced software licensed under the [MIT license](https://github.com/lukasbecvar/becvold-core/blob/main/LICENSE)
