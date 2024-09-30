@@ -1,5 +1,8 @@
 # Minecraft survival core plugin
 
+# End of support
+This project is no longer being maintained or developed, and no further updates or support will be provided.
+
 # Components
 * SetHome
 * OnePlayer sleep
@@ -14,4 +17,4 @@
    * [Website](https://getbukkit.org/)
 
 ## License
-The framework is open-sourced software licensed under the [MIT license](https://github.com/lukasbecvar/becvold-core/blob/main/LICENSE)
+The project is open-sourced software licensed under the [MIT license](https://github.com/lukasbecvar/becvold-core/blob/main/LICENSE)
